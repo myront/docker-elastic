@@ -31,7 +31,7 @@ const doesIndexExist = async (esClient, indexName) => {
 (async () => {
   try {
     const esClient = await connectToElastic();
-    const indexName = 'teomrd';
+    const indexName = 'assets';
 
     const exists = await doesIndexExist(esClient, indexName);
     if(exists) {
@@ -39,7 +39,7 @@ const doesIndexExist = async (esClient, indexName) => {
     }
     
     const schema = await fs.readFileSync('schemas/assets.json', { encoding:'utf8' })
-    const parsedSchema = JSON.parse(assetsSchema);
+    const parsedSchema = JSON.parse(schema);
 
     await esClient.indices.create({
       index: indexName,

@@ -3455,7 +3455,41 @@
   },
   "settings": {
     "index": {
-      "number_of_replicas": 1
+      "analysis": {
+        "analyzer": {
+          "analyzer_keyword": {
+            "filter": [
+              "lowercase"
+            ],
+            "tokenizer": "keyword"
+          },
+          "analyzer_word_delimiter": {
+            "filter": [
+              "lowercase",
+              "split_on_colons",
+              "standard"
+            ],
+            "tokenizer": "standard"
+          }
+        },
+        "filter": {
+          "split_on_colons": {
+            "split_on_numerics": false,
+            "type": "word_delimiter",
+            "type_table": [
+              ": => SUBWORD_DELIM"
+            ]
+          }
+        },
+        "normalizer": {
+          "normalizer_keyword": {
+            "filter": [
+              "uppercase"
+            ]
+          }
+        }
+      },
+      "number_of_replicas": 2
     }
   }
 }
