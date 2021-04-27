@@ -1,0 +1,3461 @@
+{
+  "mappings": {
+    "asset": {
+      "_all": {
+        "enabled": false
+      },
+      "dynamic": false,
+      "properties": {
+        "__v": {
+          "type": "long"
+        },
+        "accessionId": {
+          "analyzer": "analyzer_keyword",
+          "type": "text"
+        },
+        "activeRestrictions": {
+          "properties": {
+            "annotationTrackType": {
+              "fields": {
+                "keyword": {
+                  "ignore_above": 256,
+                  "type": "keyword"
+                }
+              },
+              "type": "text"
+            },
+            "authorisationGroup": {
+              "fields": {
+                "keyword": {
+                  "ignore_above": 256,
+                  "type": "keyword"
+                }
+              },
+              "type": "text"
+            },
+            "copyrightOwner": {
+              "fields": {
+                "keyword": {
+                  "ignore_above": 256,
+                  "type": "keyword"
+                }
+              },
+              "type": "text"
+            },
+            "copyrightRestrictions": {
+              "fields": {
+                "keyword": {
+                  "ignore_above": 256,
+                  "type": "keyword"
+                }
+              },
+              "type": "text"
+            },
+            "copyrightType": {
+              "fields": {
+                "keyword": {
+                  "ignore_above": 256,
+                  "type": "keyword"
+                }
+              },
+              "type": "text"
+            },
+            "description": {
+              "fields": {
+                "keyword": {
+                  "ignore_above": 256,
+                  "type": "keyword"
+                }
+              },
+              "type": "text"
+            },
+            "endDate": {
+              "format": "dateOptionalTime",
+              "type": "date"
+            },
+            "extractType": {
+              "fields": {
+                "keyword": {
+                  "ignore_above": 256,
+                  "type": "keyword"
+                }
+              },
+              "type": "text"
+            },
+            "provenance": {
+              "fields": {
+                "keyword": {
+                  "ignore_above": 256,
+                  "type": "keyword"
+                }
+              },
+              "type": "text"
+            },
+            "restrictionType": {
+              "fields": {
+                "keyword": {
+                  "ignore_above": 256,
+                  "type": "keyword"
+                }
+              },
+              "type": "text"
+            },
+            "rightsHolder": {
+              "fields": {
+                "keyword": {
+                  "ignore_above": 256,
+                  "type": "keyword"
+                }
+              },
+              "type": "text"
+            },
+            "rightsInformation": {
+              "fields": {
+                "keyword": {
+                  "ignore_above": 256,
+                  "type": "keyword"
+                }
+              },
+              "type": "text"
+            },
+            "sectionTimeIn": {
+              "type": "long"
+            },
+            "sectionTimeOut": {
+              "type": "long"
+            },
+            "severity": {
+              "fields": {
+                "keyword": {
+                  "ignore_above": 256,
+                  "type": "keyword"
+                }
+              },
+              "type": "text"
+            },
+            "startDate": {
+              "format": "dateOptionalTime",
+              "type": "date"
+            },
+            "timelineFormat": {
+              "fields": {
+                "keyword": {
+                  "ignore_above": 256,
+                  "type": "keyword"
+                }
+              },
+              "type": "text"
+            },
+            "versionNumber": {
+              "fields": {
+                "keyword": {
+                  "ignore_above": 256,
+                  "type": "keyword"
+                }
+              },
+              "type": "text"
+            }
+          }
+        },
+        "aetopiaMetadata": {
+          "properties": {
+            "aetopiaId": {
+              "type": "long"
+            },
+            "metadata": {
+              "properties": {
+                "_links": {
+                  "properties": {
+                    "categories": {
+                      "properties": {
+                        "href": {
+                          "fields": {
+                            "keyword": {
+                              "ignore_above": 256,
+                              "type": "keyword"
+                            }
+                          },
+                          "type": "text"
+                        }
+                      }
+                    },
+                    "export": {
+                      "properties": {
+                        "href": {
+                          "fields": {
+                            "keyword": {
+                              "ignore_above": 256,
+                              "type": "keyword"
+                            }
+                          },
+                          "type": "text"
+                        }
+                      }
+                    },
+                    "self": {
+                      "properties": {
+                        "href": {
+                          "fields": {
+                            "keyword": {
+                              "ignore_above": 256,
+                              "type": "keyword"
+                            }
+                          },
+                          "type": "text"
+                        }
+                      }
+                    }
+                  }
+                },
+                "categories": {
+                  "properties": {
+                    "name": {
+                      "fields": {
+                        "keyword": {
+                          "ignore_above": 256,
+                          "type": "keyword"
+                        }
+                      },
+                      "type": "text"
+                    },
+                    "value": {
+                      "fields": {
+                        "keyword": {
+                          "ignore_above": 256,
+                          "type": "keyword"
+                        }
+                      },
+                      "type": "text"
+                    }
+                  }
+                },
+                "createDate": {
+                  "type": "date"
+                },
+                "fileHash": {
+                  "fields": {
+                    "keyword": {
+                      "ignore_above": 256,
+                      "type": "keyword"
+                    }
+                  },
+                  "type": "text"
+                },
+                "height": {
+                  "type": "long"
+                },
+                "id": {
+                  "type": "long"
+                },
+                "lastModifiedDate": {
+                  "type": "date"
+                },
+                "metadata": {
+                  "properties": {
+                    "DOC_TEXT": {
+                      "fields": {
+                        "keyword": {
+                          "ignore_above": 256,
+                          "type": "keyword"
+                        }
+                      },
+                      "type": "text"
+                    },
+                    "LAST_REDACT_TIMESTAMP0": {
+                      "type": "long"
+                    },
+                    "LAST_REDACT_TIMESTAMP1": {
+                      "type": "long"
+                    },
+                    "LAST_REDACT_TIMESTAMP10": {
+                      "type": "long"
+                    },
+                    "LAST_REDACT_TIMESTAMP100": {
+                      "type": "long"
+                    },
+                    "LAST_REDACT_TIMESTAMP101": {
+                      "type": "long"
+                    },
+                    "LAST_REDACT_TIMESTAMP102": {
+                      "type": "long"
+                    },
+                    "LAST_REDACT_TIMESTAMP103": {
+                      "type": "long"
+                    },
+                    "LAST_REDACT_TIMESTAMP104": {
+                      "type": "long"
+                    },
+                    "LAST_REDACT_TIMESTAMP105": {
+                      "type": "long"
+                    },
+                    "LAST_REDACT_TIMESTAMP106": {
+                      "type": "long"
+                    },
+                    "LAST_REDACT_TIMESTAMP107": {
+                      "type": "long"
+                    },
+                    "LAST_REDACT_TIMESTAMP108": {
+                      "type": "long"
+                    },
+                    "LAST_REDACT_TIMESTAMP109": {
+                      "type": "long"
+                    },
+                    "LAST_REDACT_TIMESTAMP11": {
+                      "type": "long"
+                    },
+                    "LAST_REDACT_TIMESTAMP110": {
+                      "type": "long"
+                    },
+                    "LAST_REDACT_TIMESTAMP111": {
+                      "type": "long"
+                    },
+                    "LAST_REDACT_TIMESTAMP112": {
+                      "type": "long"
+                    },
+                    "LAST_REDACT_TIMESTAMP113": {
+                      "type": "long"
+                    },
+                    "LAST_REDACT_TIMESTAMP114": {
+                      "type": "long"
+                    },
+                    "LAST_REDACT_TIMESTAMP115": {
+                      "type": "long"
+                    },
+                    "LAST_REDACT_TIMESTAMP116": {
+                      "type": "long"
+                    },
+                    "LAST_REDACT_TIMESTAMP117": {
+                      "type": "long"
+                    },
+                    "LAST_REDACT_TIMESTAMP118": {
+                      "type": "long"
+                    },
+                    "LAST_REDACT_TIMESTAMP119": {
+                      "type": "long"
+                    },
+                    "LAST_REDACT_TIMESTAMP12": {
+                      "type": "long"
+                    },
+                    "LAST_REDACT_TIMESTAMP120": {
+                      "type": "long"
+                    },
+                    "LAST_REDACT_TIMESTAMP121": {
+                      "type": "long"
+                    },
+                    "LAST_REDACT_TIMESTAMP122": {
+                      "type": "long"
+                    },
+                    "LAST_REDACT_TIMESTAMP123": {
+                      "type": "long"
+                    },
+                    "LAST_REDACT_TIMESTAMP124": {
+                      "type": "long"
+                    },
+                    "LAST_REDACT_TIMESTAMP125": {
+                      "type": "long"
+                    },
+                    "LAST_REDACT_TIMESTAMP126": {
+                      "type": "long"
+                    },
+                    "LAST_REDACT_TIMESTAMP127": {
+                      "type": "long"
+                    },
+                    "LAST_REDACT_TIMESTAMP128": {
+                      "type": "long"
+                    },
+                    "LAST_REDACT_TIMESTAMP129": {
+                      "type": "long"
+                    },
+                    "LAST_REDACT_TIMESTAMP13": {
+                      "type": "long"
+                    },
+                    "LAST_REDACT_TIMESTAMP130": {
+                      "type": "long"
+                    },
+                    "LAST_REDACT_TIMESTAMP131": {
+                      "type": "long"
+                    },
+                    "LAST_REDACT_TIMESTAMP132": {
+                      "type": "long"
+                    },
+                    "LAST_REDACT_TIMESTAMP133": {
+                      "type": "long"
+                    },
+                    "LAST_REDACT_TIMESTAMP134": {
+                      "type": "long"
+                    },
+                    "LAST_REDACT_TIMESTAMP135": {
+                      "type": "long"
+                    },
+                    "LAST_REDACT_TIMESTAMP136": {
+                      "type": "long"
+                    },
+                    "LAST_REDACT_TIMESTAMP137": {
+                      "type": "long"
+                    },
+                    "LAST_REDACT_TIMESTAMP138": {
+                      "type": "long"
+                    },
+                    "LAST_REDACT_TIMESTAMP139": {
+                      "type": "long"
+                    },
+                    "LAST_REDACT_TIMESTAMP14": {
+                      "type": "long"
+                    },
+                    "LAST_REDACT_TIMESTAMP140": {
+                      "type": "long"
+                    },
+                    "LAST_REDACT_TIMESTAMP141": {
+                      "type": "long"
+                    },
+                    "LAST_REDACT_TIMESTAMP142": {
+                      "type": "long"
+                    },
+                    "LAST_REDACT_TIMESTAMP143": {
+                      "type": "long"
+                    },
+                    "LAST_REDACT_TIMESTAMP144": {
+                      "type": "long"
+                    },
+                    "LAST_REDACT_TIMESTAMP145": {
+                      "type": "long"
+                    },
+                    "LAST_REDACT_TIMESTAMP146": {
+                      "type": "long"
+                    },
+                    "LAST_REDACT_TIMESTAMP147": {
+                      "type": "long"
+                    },
+                    "LAST_REDACT_TIMESTAMP148": {
+                      "type": "long"
+                    },
+                    "LAST_REDACT_TIMESTAMP149": {
+                      "type": "long"
+                    },
+                    "LAST_REDACT_TIMESTAMP15": {
+                      "type": "long"
+                    },
+                    "LAST_REDACT_TIMESTAMP150": {
+                      "type": "long"
+                    },
+                    "LAST_REDACT_TIMESTAMP151": {
+                      "type": "long"
+                    },
+                    "LAST_REDACT_TIMESTAMP152": {
+                      "type": "long"
+                    },
+                    "LAST_REDACT_TIMESTAMP153": {
+                      "type": "long"
+                    },
+                    "LAST_REDACT_TIMESTAMP154": {
+                      "type": "long"
+                    },
+                    "LAST_REDACT_TIMESTAMP155": {
+                      "type": "long"
+                    },
+                    "LAST_REDACT_TIMESTAMP156": {
+                      "type": "long"
+                    },
+                    "LAST_REDACT_TIMESTAMP157": {
+                      "type": "long"
+                    },
+                    "LAST_REDACT_TIMESTAMP158": {
+                      "type": "long"
+                    },
+                    "LAST_REDACT_TIMESTAMP159": {
+                      "type": "long"
+                    },
+                    "LAST_REDACT_TIMESTAMP16": {
+                      "type": "long"
+                    },
+                    "LAST_REDACT_TIMESTAMP160": {
+                      "type": "long"
+                    },
+                    "LAST_REDACT_TIMESTAMP161": {
+                      "type": "long"
+                    },
+                    "LAST_REDACT_TIMESTAMP162": {
+                      "type": "long"
+                    },
+                    "LAST_REDACT_TIMESTAMP163": {
+                      "type": "long"
+                    },
+                    "LAST_REDACT_TIMESTAMP164": {
+                      "type": "long"
+                    },
+                    "LAST_REDACT_TIMESTAMP165": {
+                      "type": "long"
+                    },
+                    "LAST_REDACT_TIMESTAMP166": {
+                      "type": "long"
+                    },
+                    "LAST_REDACT_TIMESTAMP167": {
+                      "type": "long"
+                    },
+                    "LAST_REDACT_TIMESTAMP168": {
+                      "type": "long"
+                    },
+                    "LAST_REDACT_TIMESTAMP169": {
+                      "type": "long"
+                    },
+                    "LAST_REDACT_TIMESTAMP17": {
+                      "type": "long"
+                    },
+                    "LAST_REDACT_TIMESTAMP170": {
+                      "type": "long"
+                    },
+                    "LAST_REDACT_TIMESTAMP171": {
+                      "type": "long"
+                    },
+                    "LAST_REDACT_TIMESTAMP172": {
+                      "type": "long"
+                    },
+                    "LAST_REDACT_TIMESTAMP173": {
+                      "type": "long"
+                    },
+                    "LAST_REDACT_TIMESTAMP174": {
+                      "type": "long"
+                    },
+                    "LAST_REDACT_TIMESTAMP175": {
+                      "type": "long"
+                    },
+                    "LAST_REDACT_TIMESTAMP18": {
+                      "type": "long"
+                    },
+                    "LAST_REDACT_TIMESTAMP19": {
+                      "type": "long"
+                    },
+                    "LAST_REDACT_TIMESTAMP2": {
+                      "type": "long"
+                    },
+                    "LAST_REDACT_TIMESTAMP20": {
+                      "type": "long"
+                    },
+                    "LAST_REDACT_TIMESTAMP21": {
+                      "type": "long"
+                    },
+                    "LAST_REDACT_TIMESTAMP22": {
+                      "type": "long"
+                    },
+                    "LAST_REDACT_TIMESTAMP23": {
+                      "type": "long"
+                    },
+                    "LAST_REDACT_TIMESTAMP24": {
+                      "type": "long"
+                    },
+                    "LAST_REDACT_TIMESTAMP25": {
+                      "type": "long"
+                    },
+                    "LAST_REDACT_TIMESTAMP26": {
+                      "type": "long"
+                    },
+                    "LAST_REDACT_TIMESTAMP27": {
+                      "type": "long"
+                    },
+                    "LAST_REDACT_TIMESTAMP28": {
+                      "type": "long"
+                    },
+                    "LAST_REDACT_TIMESTAMP29": {
+                      "type": "long"
+                    },
+                    "LAST_REDACT_TIMESTAMP3": {
+                      "type": "long"
+                    },
+                    "LAST_REDACT_TIMESTAMP30": {
+                      "type": "long"
+                    },
+                    "LAST_REDACT_TIMESTAMP31": {
+                      "type": "long"
+                    },
+                    "LAST_REDACT_TIMESTAMP32": {
+                      "type": "long"
+                    },
+                    "LAST_REDACT_TIMESTAMP33": {
+                      "type": "long"
+                    },
+                    "LAST_REDACT_TIMESTAMP34": {
+                      "type": "long"
+                    },
+                    "LAST_REDACT_TIMESTAMP35": {
+                      "type": "long"
+                    },
+                    "LAST_REDACT_TIMESTAMP36": {
+                      "type": "long"
+                    },
+                    "LAST_REDACT_TIMESTAMP37": {
+                      "type": "long"
+                    },
+                    "LAST_REDACT_TIMESTAMP38": {
+                      "type": "long"
+                    },
+                    "LAST_REDACT_TIMESTAMP39": {
+                      "type": "long"
+                    },
+                    "LAST_REDACT_TIMESTAMP4": {
+                      "type": "long"
+                    },
+                    "LAST_REDACT_TIMESTAMP40": {
+                      "type": "long"
+                    },
+                    "LAST_REDACT_TIMESTAMP41": {
+                      "type": "long"
+                    },
+                    "LAST_REDACT_TIMESTAMP42": {
+                      "type": "long"
+                    },
+                    "LAST_REDACT_TIMESTAMP43": {
+                      "type": "long"
+                    },
+                    "LAST_REDACT_TIMESTAMP44": {
+                      "type": "long"
+                    },
+                    "LAST_REDACT_TIMESTAMP45": {
+                      "type": "long"
+                    },
+                    "LAST_REDACT_TIMESTAMP46": {
+                      "type": "long"
+                    },
+                    "LAST_REDACT_TIMESTAMP47": {
+                      "type": "long"
+                    },
+                    "LAST_REDACT_TIMESTAMP48": {
+                      "type": "long"
+                    },
+                    "LAST_REDACT_TIMESTAMP49": {
+                      "type": "long"
+                    },
+                    "LAST_REDACT_TIMESTAMP5": {
+                      "type": "long"
+                    },
+                    "LAST_REDACT_TIMESTAMP50": {
+                      "type": "long"
+                    },
+                    "LAST_REDACT_TIMESTAMP51": {
+                      "type": "long"
+                    },
+                    "LAST_REDACT_TIMESTAMP52": {
+                      "type": "long"
+                    },
+                    "LAST_REDACT_TIMESTAMP53": {
+                      "type": "long"
+                    },
+                    "LAST_REDACT_TIMESTAMP54": {
+                      "type": "long"
+                    },
+                    "LAST_REDACT_TIMESTAMP55": {
+                      "type": "long"
+                    },
+                    "LAST_REDACT_TIMESTAMP56": {
+                      "type": "long"
+                    },
+                    "LAST_REDACT_TIMESTAMP57": {
+                      "type": "long"
+                    },
+                    "LAST_REDACT_TIMESTAMP58": {
+                      "type": "long"
+                    },
+                    "LAST_REDACT_TIMESTAMP59": {
+                      "type": "long"
+                    },
+                    "LAST_REDACT_TIMESTAMP6": {
+                      "type": "long"
+                    },
+                    "LAST_REDACT_TIMESTAMP60": {
+                      "type": "long"
+                    },
+                    "LAST_REDACT_TIMESTAMP61": {
+                      "type": "long"
+                    },
+                    "LAST_REDACT_TIMESTAMP62": {
+                      "type": "long"
+                    },
+                    "LAST_REDACT_TIMESTAMP63": {
+                      "type": "long"
+                    },
+                    "LAST_REDACT_TIMESTAMP64": {
+                      "type": "long"
+                    },
+                    "LAST_REDACT_TIMESTAMP65": {
+                      "type": "long"
+                    },
+                    "LAST_REDACT_TIMESTAMP66": {
+                      "type": "long"
+                    },
+                    "LAST_REDACT_TIMESTAMP67": {
+                      "type": "long"
+                    },
+                    "LAST_REDACT_TIMESTAMP68": {
+                      "type": "long"
+                    },
+                    "LAST_REDACT_TIMESTAMP69": {
+                      "type": "long"
+                    },
+                    "LAST_REDACT_TIMESTAMP7": {
+                      "type": "long"
+                    },
+                    "LAST_REDACT_TIMESTAMP70": {
+                      "type": "long"
+                    },
+                    "LAST_REDACT_TIMESTAMP71": {
+                      "type": "long"
+                    },
+                    "LAST_REDACT_TIMESTAMP72": {
+                      "type": "long"
+                    },
+                    "LAST_REDACT_TIMESTAMP73": {
+                      "type": "long"
+                    },
+                    "LAST_REDACT_TIMESTAMP74": {
+                      "type": "long"
+                    },
+                    "LAST_REDACT_TIMESTAMP75": {
+                      "type": "long"
+                    },
+                    "LAST_REDACT_TIMESTAMP76": {
+                      "type": "long"
+                    },
+                    "LAST_REDACT_TIMESTAMP77": {
+                      "type": "long"
+                    },
+                    "LAST_REDACT_TIMESTAMP78": {
+                      "type": "long"
+                    },
+                    "LAST_REDACT_TIMESTAMP79": {
+                      "type": "long"
+                    },
+                    "LAST_REDACT_TIMESTAMP8": {
+                      "type": "long"
+                    },
+                    "LAST_REDACT_TIMESTAMP80": {
+                      "type": "long"
+                    },
+                    "LAST_REDACT_TIMESTAMP81": {
+                      "type": "long"
+                    },
+                    "LAST_REDACT_TIMESTAMP82": {
+                      "type": "long"
+                    },
+                    "LAST_REDACT_TIMESTAMP83": {
+                      "type": "long"
+                    },
+                    "LAST_REDACT_TIMESTAMP84": {
+                      "type": "long"
+                    },
+                    "LAST_REDACT_TIMESTAMP85": {
+                      "type": "long"
+                    },
+                    "LAST_REDACT_TIMESTAMP86": {
+                      "type": "long"
+                    },
+                    "LAST_REDACT_TIMESTAMP87": {
+                      "type": "long"
+                    },
+                    "LAST_REDACT_TIMESTAMP88": {
+                      "type": "long"
+                    },
+                    "LAST_REDACT_TIMESTAMP89": {
+                      "type": "long"
+                    },
+                    "LAST_REDACT_TIMESTAMP9": {
+                      "type": "long"
+                    },
+                    "LAST_REDACT_TIMESTAMP90": {
+                      "type": "long"
+                    },
+                    "LAST_REDACT_TIMESTAMP91": {
+                      "type": "long"
+                    },
+                    "LAST_REDACT_TIMESTAMP92": {
+                      "type": "long"
+                    },
+                    "LAST_REDACT_TIMESTAMP93": {
+                      "type": "long"
+                    },
+                    "LAST_REDACT_TIMESTAMP94": {
+                      "type": "long"
+                    },
+                    "LAST_REDACT_TIMESTAMP95": {
+                      "type": "long"
+                    },
+                    "LAST_REDACT_TIMESTAMP96": {
+                      "type": "long"
+                    },
+                    "LAST_REDACT_TIMESTAMP97": {
+                      "type": "long"
+                    },
+                    "LAST_REDACT_TIMESTAMP98": {
+                      "type": "long"
+                    },
+                    "LAST_REDACT_TIMESTAMP99": {
+                      "type": "long"
+                    },
+                    "MEDIA_ASPECT": {
+                      "type": "long"
+                    },
+                    "MEDIA_AUTO_RELEASE_FLAG": {
+                      "type": "boolean"
+                    },
+                    "MEDIA_DATECREATED": {
+                      "type": "date"
+                    },
+                    "MEDIA_DESC": {
+                      "fields": {
+                        "keyword": {
+                          "ignore_above": 256,
+                          "type": "keyword"
+                        }
+                      },
+                      "type": "text"
+                    },
+                    "MEDIA_ENABLE_ASSIGNMENT": {
+                      "type": "boolean"
+                    },
+                    "MEDIA_ENCRYPTED": {
+                      "type": "boolean"
+                    },
+                    "MEDIA_FILENAME_KEYWORDS": {
+                      "fields": {
+                        "keyword": {
+                          "ignore_above": 256,
+                          "type": "keyword"
+                        }
+                      },
+                      "type": "text"
+                    },
+                    "MEDIA_FOR_SALE_FLAG": {
+                      "type": "boolean"
+                    },
+                    "MEDIA_FORMAT_CODE": {
+                      "type": "long"
+                    },
+                    "MEDIA_HEIGHT": {
+                      "type": "long"
+                    },
+                    "MEDIA_IS_PUBLIC_FLAG": {
+                      "type": "boolean"
+                    },
+                    "MEDIA_MIME_TYPE": {
+                      "fields": {
+                        "keyword": {
+                          "ignore_above": 256,
+                          "type": "keyword"
+                        }
+                      },
+                      "type": "text"
+                    },
+                    "MEDIA_NUM_PAGES": {
+                      "type": "long"
+                    },
+                    "MEDIA_PROJECT": {
+                      "fields": {
+                        "keyword": {
+                          "ignore_above": 256,
+                          "type": "keyword"
+                        }
+                      },
+                      "type": "text"
+                    },
+                    "MEDIA_REJECT_FLAG": {
+                      "type": "boolean"
+                    },
+                    "MEDIA_SRCHASH": {
+                      "fields": {
+                        "keyword": {
+                          "ignore_above": 256,
+                          "type": "keyword"
+                        }
+                      },
+                      "type": "text"
+                    },
+                    "MEDIA_TIMEIMPORTED": {
+                      "type": "date"
+                    },
+                    "MEDIA_WIDTH": {
+                      "type": "long"
+                    },
+                    "PAGE_ORIENTATIONS": {
+                      "type": "long"
+                    },
+                    "PAGE_SIZES": {
+                      "type": "long"
+                    }
+                  }
+                },
+                "mimeType": {
+                  "fields": {
+                    "keyword": {
+                      "ignore_above": 256,
+                      "type": "keyword"
+                    }
+                  },
+                  "type": "text"
+                },
+                "originalFileName": {
+                  "fields": {
+                    "keyword": {
+                      "ignore_above": 256,
+                      "type": "keyword"
+                    }
+                  },
+                  "type": "text"
+                },
+                "pathTail": {
+                  "fields": {
+                    "keyword": {
+                      "ignore_above": 256,
+                      "type": "keyword"
+                    }
+                  },
+                  "type": "text"
+                },
+                "size": {
+                  "type": "long"
+                },
+                "version": {
+                  "type": "long"
+                },
+                "width": {
+                  "type": "long"
+                }
+              }
+            },
+            "updated": {
+              "format": "dateOptionalTime",
+              "type": "date"
+            }
+          }
+        },
+        "alternateTransmissionDateText": {
+          "fields": {
+            "keyword": {
+              "ignore_above": 256,
+              "type": "keyword"
+            }
+          },
+          "type": "text"
+        },
+        "annotations": {
+          "fields": {
+            "keyword": {
+              "ignore_above": 256,
+              "type": "keyword"
+            }
+          },
+          "type": "text"
+        },
+        "archiveTapeId": {
+          "analyzer": "analyzer_keyword",
+          "type": "text"
+        },
+        "archiveTapeIds": {
+          "type": "keyword"
+        },
+        "dataFromSpools": {
+          "properties": {
+            "spoolId": {
+              "type": "keyword"
+            },
+            "spoolUuid": {
+              "type": "keyword"
+            },
+            "archiveTapeId": {
+              "type": "keyword"
+            },
+            "startTimeCode": {
+              "type": "long"
+            },
+            "sequenceNumber": {
+              "type": "long"
+            },
+            "itemNumber": {
+              "type": "long"
+            },
+            "duration": {
+              "type": "long"
+            },
+            "description": {
+              "type": "text"
+            },
+            "preservationStatus": {
+              "type": "keyword"
+            },
+            "holdingManufacturer": {
+              "type": "keyword"
+            },
+            "accessionId": {
+              "type": "keyword"
+            },
+            "holdingBaseLocation": {
+              "type": "keyword"
+            },
+            "holdingBaseLocationCode": {
+              "type": "keyword"
+            },
+            "holdingFormat": {
+              "type": "keyword"
+            },
+            "holdingFormatType": {
+              "type": "keyword"
+            },
+            "holdingFormatSize": {
+              "type": "keyword"
+            },
+            "spoolStatus": {
+              "type": "keyword"
+            },
+            "holdingType": {
+              "type": "keyword"
+            },
+            "storageId": {
+              "type": "keyword"
+            }
+          }
+        },
+        "archiveTapeIdSynonyms": {
+          "type": "keyword"
+        },
+        "archiveTapeIdItemNumber": {
+          "type": "long"
+        },
+        "aspectRatio": {
+          "fields": {
+            "keyword": {
+              "ignore_above": 256,
+              "type": "keyword"
+            }
+          },
+          "type": "text"
+        },
+        "assetType": {
+          "type": "text"
+        },
+        "associatedTapeIds": {
+          "type": "text"
+        },
+        "billedTitle": {
+          "analyzer": "analyzer_word_delimiter",
+          "type": "text"
+        },
+        "captureLocation": {
+          "analyzer": "analyzer_word_delimiter",
+          "type": "text"
+        },
+        "clipComments": {
+          "fields": {
+            "keyword": {
+              "ignore_above": 256,
+              "type": "keyword"
+            }
+          },
+          "type": "text"
+        },
+        "clipDuration": {
+          "type": "long"
+        },
+        "clipName": {
+          "analyzer": "analyzer_word_delimiter",
+          "type": "text"
+        },
+        "clipType": {
+          "fields": {
+            "keyword": {
+              "ignore_above": 256,
+              "type": "keyword"
+            }
+          },
+          "type": "text"
+        },
+        "collections": {
+          "type": "text"
+        },
+        "combinedAssetTapeIdList": {
+          "fields": {
+            "keyword": {
+              "ignore_above": 256,
+              "type": "keyword"
+            }
+          },
+          "type": "text"
+        },
+        "conceptTags": {
+          "type": "keyword"
+        },
+        "contentType": {
+          "type": "keyword"
+        },
+        "published": {
+          "type": "boolean"
+        },
+        "fabricConceptTags": {
+          "properties": {
+            "Subject": {
+              "properties": {
+                "preferredTermText": {
+                  "fields": {
+                    "keyword": {
+                      "ignore_above": 256,
+                      "type": "keyword"
+                    }
+                  },
+                  "type": "text"
+                }
+              }
+            },
+            "Geographic": {
+              "properties": {
+                "preferredTermText": {
+                  "fields": {
+                    "keyword": {
+                      "ignore_above": 256,
+                      "type": "keyword"
+                    }
+                  },
+                  "type": "text"
+                }
+              }
+            }
+          }
+        },
+        "contributor": {
+          "analyzer": "analyzer_word_delimiter",
+          "type": "text"
+        },
+        "contributors": {
+          "properties": {
+            "billingOrder": {
+              "type": "long"
+            },
+            "clearanceUuid": {
+              "fields": {
+                "keyword": {
+                  "ignore_above": 256,
+                  "type": "keyword"
+                }
+              },
+              "type": "text"
+            },
+            "contributionRoleType": {
+              "type": "text"
+            },
+            "contributionUuid": {
+              "fields": {
+                "keyword": {
+                  "ignore_above": 256,
+                  "type": "keyword"
+                }
+              },
+              "type": "text"
+            },
+            "contributorRole": {
+              "fields": {
+                "keyword": {
+                  "ignore_above": 256,
+                  "type": "keyword"
+                }
+              },
+              "type": "text"
+            },
+            "contributorRoleType": {
+              "fields": {
+                "keyword": {
+                  "ignore_above": 256,
+                  "type": "keyword"
+                }
+              },
+              "type": "text"
+            },
+            "contributorUuid": {
+              "fields": {
+                "keyword": {
+                  "ignore_above": 256,
+                  "type": "keyword"
+                }
+              },
+              "type": "text"
+            },
+            "disambiguation": {
+              "fields": {
+                "keyword": {
+                  "ignore_above": 256,
+                  "type": "keyword"
+                }
+              },
+              "type": "text"
+            },
+            "familyName": {
+              "type": "text"
+            },
+            "givenName": {
+              "type": "text"
+            },
+            "honorificPrefix": {
+              "type": "text"
+            },
+            "honorificSuffix": {
+              "fields": {
+                "keyword": {
+                  "ignore_above": 256,
+                  "type": "keyword"
+                }
+              },
+              "type": "text"
+            },
+            "productVersionUuid": {
+              "fields": {
+                "keyword": {
+                  "ignore_above": 256,
+                  "type": "keyword"
+                }
+              },
+              "type": "text"
+            },
+            "roleDescription": {
+              "fields": {
+                "keyword": {
+                  "ignore_above": 256,
+                  "type": "keyword"
+                }
+              },
+              "type": "text"
+            },
+            "timelineFormat": {
+              "fields": {
+                "keyword": {
+                  "ignore_above": 256,
+                  "type": "keyword"
+                }
+              },
+              "type": "text"
+            },
+            "timelineSectionIn": {
+              "type": "long"
+            },
+            "timelineSectionOut": {
+              "type": "long"
+            }
+          }
+        },
+        "disambiguatedContributors": {
+          "properties": {
+            "billingOrder": {
+              "type": "long"
+            },
+            "clearanceUuid": {
+              "fields": {
+                "keyword": {
+                  "ignore_above": 256,
+                  "type": "keyword"
+                }
+              },
+              "type": "text"
+            },
+            "contributionRoleType": {
+              "type": "text"
+            },
+            "contributionUuid": {
+              "fields": {
+                "keyword": {
+                  "ignore_above": 256,
+                  "type": "keyword"
+                }
+              },
+              "type": "text"
+            },
+            "contributorRole": {
+              "fields": {
+                "keyword": {
+                  "ignore_above": 256,
+                  "type": "keyword"
+                }
+              },
+              "type": "text"
+            },
+            "contributorRoleType": {
+              "fields": {
+                "keyword": {
+                  "ignore_above": 256,
+                  "type": "keyword"
+                }
+              },
+              "type": "text"
+            },
+            "contributorUuid": {
+              "fields": {
+                "keyword": {
+                  "ignore_above": 256,
+                  "type": "keyword"
+                }
+              },
+              "type": "text"
+            },
+            "disambiguation": {
+              "fields": {
+                "keyword": {
+                  "ignore_above": 256,
+                  "type": "keyword"
+                }
+              },
+              "type": "text"
+            },
+            "familyName": {
+              "type": "text"
+            },
+            "givenName": {
+              "type": "text"
+            },
+            "honorificPrefix": {
+              "type": "text"
+            },
+            "honorificSuffix": {
+              "fields": {
+                "keyword": {
+                  "ignore_above": 256,
+                  "type": "keyword"
+                }
+              },
+              "type": "text"
+            },
+            "productVersionUuid": {
+              "fields": {
+                "keyword": {
+                  "ignore_above": 256,
+                  "type": "keyword"
+                }
+              },
+              "type": "text"
+            },
+            "roleDescription": {
+              "fields": {
+                "keyword": {
+                  "ignore_above": 256,
+                  "type": "keyword"
+                }
+              },
+              "type": "text"
+            },
+            "timelineFormat": {
+              "fields": {
+                "keyword": {
+                  "ignore_above": 256,
+                  "type": "keyword"
+                }
+              },
+              "type": "text"
+            },
+            "timelineSectionIn": {
+              "type": "long"
+            },
+            "timelineSectionOut": {
+              "type": "long"
+            }
+          }
+        },
+        "contributions": {
+          "properties": {
+            "contributionId": {
+              "type": "keyword"
+            },
+            "contributorId": {
+              "type": "keyword"
+            },
+            "contributorRoleIdentifier": {
+              "type": "keyword"
+            },
+            "primaryName": {
+              "analyzer": "analyzer_word_delimiter",
+              "type": "text"
+            },
+            "alternativeNames": {
+              "analyzer": "analyzer_word_delimiter",
+              "type": "text"
+            },
+            "roleName": {
+              "type": "keyword"
+            },
+            "sourceSystem": {
+              "type": "keyword"
+            },
+            "disambiguationDescription": {
+              "analyzer": "analyzer_word_delimiter",
+              "type": "text"
+            }
+          }
+        },
+        "copyrightRestrictions": {
+          "fields": {
+            "keyword": {
+              "ignore_above": 256,
+              "type": "keyword"
+            }
+          },
+          "type": "text"
+        },
+        "createdDate": {
+          "format": "dateOptionalTime",
+          "type": "date"
+        },
+        "date": {
+          "type": "date"
+        },
+        "deleted": {
+          "type": "boolean"
+        },
+        "deletedAtSource": {
+          "type": "boolean"
+        },
+        "deletedDate": {
+          "format": "dateOptionalTime",
+          "type": "date"
+        },
+        "deletedReason": {
+          "fields": {
+            "keyword": {
+              "ignore_above": 256,
+              "type": "keyword"
+            }
+          },
+          "type": "text"
+        },
+        "description": {
+          "analyzer": "analyzer_word_delimiter",
+          "type": "text"
+        },
+        "devInfo": {
+          "fields": {
+            "keyword": {
+              "ignore_above": 256,
+              "type": "keyword"
+            }
+          },
+          "type": "text"
+        },
+        "digitisationBatch": {
+          "type": "text"
+        },
+        "digitisationIngestType": {
+          "type": "text"
+        },
+        "digitisationMediaSection": {
+          "properties": {
+            "section": {
+              "type": "long"
+            },
+            "totalSections": {
+              "type": "long"
+            }
+          }
+        },
+        "digitisationMediaSource": {
+          "fields": {
+            "keyword": {
+              "ignore_above": 256,
+              "type": "keyword"
+            }
+          },
+          "type": "text"
+        },
+        "digitisationMediaSourceAlt": {
+          "fields": {
+            "keyword": {
+              "ignore_above": 256,
+              "type": "keyword"
+            }
+          },
+          "type": "text"
+        },
+        "enrichmentStatus": {
+          "fields": {
+            "keyword": {
+              "ignore_above": 256,
+              "type": "keyword"
+            }
+          },
+          "type": "text"
+        },
+        "episodeId": {
+          "analyzer": "standard",
+          "type": "text"
+        },
+        "episodeOrderNumber": {
+          "type": "integer"
+        },
+        "episodeTitle": {
+          "analyzer": "analyzer_word_delimiter",
+          "type": "text"
+        },
+        "externalUrl": {
+          "fields": {
+            "keyword": {
+              "ignore_above": 256,
+              "type": "keyword"
+            }
+          },
+          "type": "text"
+        },
+        "fabricMetadata": {
+          "properties": {
+            "state": {
+              "analyzer": "analyzer_keyword",
+              "type": "text"
+            },
+            "updated": {
+              "format": "dateOptionalTime",
+              "type": "date"
+            },
+            "uuid": {
+              "analyzer": "analyzer_keyword",
+              "type": "text"
+            }
+          }
+        },
+        "familyId": {
+          "type": "keyword"
+        },
+        "familyType": {
+          "type": "keyword"
+        },
+        "parentId": {
+          "type": "keyword"
+        },
+        "fieldEdits": {
+          "properties": {
+            "contributor": {
+              "fields": {
+                "keyword": {
+                  "ignore_above": 256,
+                  "type": "keyword"
+                }
+              },
+              "type": "text"
+            },
+            "description": {
+              "fields": {
+                "keyword": {
+                  "ignore_above": 256,
+                  "type": "keyword"
+                }
+              },
+              "type": "text"
+            },
+            "programmeNumber": {
+              "fields": {
+                "keyword": {
+                  "ignore_above": 256,
+                  "type": "keyword"
+                }
+              },
+              "type": "text"
+            },
+            "strixMetadata": {
+              "properties": {
+                "description": {
+                  "fields": {
+                    "keyword": {
+                      "ignore_above": 256,
+                      "type": "keyword"
+                    }
+                  },
+                  "type": "text"
+                },
+                "keywords": {
+                  "fields": {
+                    "keyword": {
+                      "ignore_above": 256,
+                      "type": "keyword"
+                    }
+                  },
+                  "type": "text"
+                },
+                "rightsRestrictions": {
+                  "fields": {
+                    "keyword": {
+                      "ignore_above": 256,
+                      "type": "keyword"
+                    }
+                  },
+                  "type": "text"
+                },
+                "synopsis": {
+                  "fields": {
+                    "keyword": {
+                      "ignore_above": 256,
+                      "type": "keyword"
+                    }
+                  },
+                  "type": "text"
+                }
+              }
+            }
+          }
+        },
+        "fieldParents": {
+          "properties": {
+            "annotations": {
+              "fields": {
+                "keyword": {
+                  "ignore_above": 256,
+                  "type": "keyword"
+                }
+              },
+              "type": "text"
+            },
+            "archiveTapeId": {
+              "fields": {
+                "keyword": {
+                  "ignore_above": 256,
+                  "type": "keyword"
+                }
+              },
+              "type": "text"
+            },
+            "assetType": {
+              "fields": {
+                "keyword": {
+                  "ignore_above": 256,
+                  "type": "keyword"
+                }
+              },
+              "type": "text"
+            },
+            "associatedTapeIds": {
+              "fields": {
+                "keyword": {
+                  "ignore_above": 256,
+                  "type": "keyword"
+                }
+              },
+              "type": "text"
+            },
+            "captureLocation": {
+              "fields": {
+                "keyword": {
+                  "ignore_above": 256,
+                  "type": "keyword"
+                }
+              },
+              "type": "text"
+            },
+            "childItems": {
+              "fields": {
+                "keyword": {
+                  "ignore_above": 256,
+                  "type": "keyword"
+                }
+              },
+              "type": "text"
+            },
+            "clipComments": {
+              "fields": {
+                "keyword": {
+                  "ignore_above": 256,
+                  "type": "keyword"
+                }
+              },
+              "type": "text"
+            },
+            "clipDuration": {
+              "fields": {
+                "keyword": {
+                  "ignore_above": 256,
+                  "type": "keyword"
+                }
+              },
+              "type": "text"
+            },
+            "clipType": {
+              "fields": {
+                "keyword": {
+                  "ignore_above": 256,
+                  "type": "keyword"
+                }
+              },
+              "type": "text"
+            },
+            "combinedAssetTapeIdList": {
+              "fields": {
+                "keyword": {
+                  "ignore_above": 256,
+                  "type": "keyword"
+                }
+              },
+              "type": "text"
+            },
+            "contributor": {
+              "fields": {
+                "keyword": {
+                  "ignore_above": 256,
+                  "type": "keyword"
+                }
+              },
+              "type": "text"
+            },
+            "contributors": {
+              "fields": {
+                "keyword": {
+                  "ignore_above": 256,
+                  "type": "keyword"
+                }
+              },
+              "type": "text"
+            },
+            "createdDate": {
+              "fields": {
+                "keyword": {
+                  "ignore_above": 256,
+                  "type": "keyword"
+                }
+              },
+              "type": "text"
+            },
+            "deleted": {
+              "fields": {
+                "keyword": {
+                  "ignore_above": 256,
+                  "type": "keyword"
+                }
+              },
+              "type": "text"
+            },
+            "description": {
+              "fields": {
+                "keyword": {
+                  "ignore_above": 256,
+                  "type": "keyword"
+                }
+              },
+              "type": "text"
+            },
+            "devInfo": {
+              "fields": {
+                "keyword": {
+                  "ignore_above": 256,
+                  "type": "keyword"
+                }
+              },
+              "type": "text"
+            },
+            "episodeTitle": {
+              "fields": {
+                "keyword": {
+                  "ignore_above": 256,
+                  "type": "keyword"
+                }
+              },
+              "type": "text"
+            },
+            "keywords": {
+              "fields": {
+                "keyword": {
+                  "ignore_above": 256,
+                  "type": "keyword"
+                }
+              },
+              "type": "text"
+            },
+            "matchParameters": {
+              "fields": {
+                "keyword": {
+                  "ignore_above": 256,
+                  "type": "keyword"
+                }
+              },
+              "type": "text"
+            },
+            "mediaAssetCopyrights": {
+              "fields": {
+                "keyword": {
+                  "ignore_above": 256,
+                  "type": "keyword"
+                }
+              },
+              "type": "text"
+            },
+            "mediaAssetRestrictions": {
+              "fields": {
+                "keyword": {
+                  "ignore_above": 256,
+                  "type": "keyword"
+                }
+              },
+              "type": "text"
+            },
+            "modifiedDate": {
+              "fields": {
+                "keyword": {
+                  "ignore_above": 256,
+                  "type": "keyword"
+                }
+              },
+              "type": "text"
+            },
+            "newsDayNumber": {
+              "fields": {
+                "keyword": {
+                  "ignore_above": 256,
+                  "type": "keyword"
+                }
+              },
+              "type": "text"
+            },
+            "productionScript": {
+              "fields": {
+                "keyword": {
+                  "ignore_above": 256,
+                  "type": "keyword"
+                }
+              },
+              "type": "text"
+            },
+            "programmeComponent": {
+              "fields": {
+                "keyword": {
+                  "ignore_above": 256,
+                  "type": "keyword"
+                }
+              },
+              "type": "text"
+            },
+            "programmeNumber": {
+              "fields": {
+                "keyword": {
+                  "ignore_above": 256,
+                  "type": "keyword"
+                }
+              },
+              "type": "text"
+            },
+            "rewindAssetId": {
+              "fields": {
+                "keyword": {
+                  "ignore_above": 256,
+                  "type": "keyword"
+                }
+              },
+              "type": "text"
+            },
+            "rightsRestrictions": {
+              "fields": {
+                "keyword": {
+                  "ignore_above": 256,
+                  "type": "keyword"
+                }
+              },
+              "type": "text"
+            },
+            "seriesId": {
+              "fields": {
+                "keyword": {
+                  "ignore_above": 256,
+                  "type": "keyword"
+                }
+              },
+              "type": "text"
+            },
+            "seriesTitle": {
+              "fields": {
+                "keyword": {
+                  "ignore_above": 256,
+                  "normalizer": "normalizer_keyword",
+                  "type": "keyword"
+                }
+              },
+              "type": "text"
+            },
+            "sourceId": {
+              "fields": {
+                "keyword": {
+                  "ignore_above": 256,
+                  "type": "keyword"
+                }
+              },
+              "type": "text"
+            },
+            "sourceSystem": {
+              "fields": {
+                "keyword": {
+                  "ignore_above": 256,
+                  "type": "keyword"
+                }
+              },
+              "type": "text"
+            },
+            "strixMetadata": {
+              "properties": {
+                "archiveTapeId": {
+                  "fields": {
+                    "keyword": {
+                      "ignore_above": 256,
+                      "type": "keyword"
+                    }
+                  },
+                  "type": "text"
+                },
+                "clipComments": {
+                  "fields": {
+                    "keyword": {
+                      "ignore_above": 256,
+                      "type": "keyword"
+                    }
+                  },
+                  "type": "text"
+                },
+                "description": {
+                  "fields": {
+                    "keyword": {
+                      "ignore_above": 256,
+                      "type": "keyword"
+                    }
+                  },
+                  "type": "text"
+                },
+                "episodeTitle": {
+                  "fields": {
+                    "keyword": {
+                      "ignore_above": 256,
+                      "type": "keyword"
+                    }
+                  },
+                  "type": "text"
+                },
+                "keywords": {
+                  "fields": {
+                    "keyword": {
+                      "ignore_above": 256,
+                      "type": "keyword"
+                    }
+                  },
+                  "type": "text"
+                },
+                "synopsis": {
+                  "fields": {
+                    "keyword": {
+                      "ignore_above": 256,
+                      "type": "keyword"
+                    }
+                  },
+                  "type": "text"
+                },
+                "transmissionDate": {
+                  "fields": {
+                    "keyword": {
+                      "ignore_above": 256,
+                      "type": "keyword"
+                    }
+                  },
+                  "type": "text"
+                }
+              }
+            },
+            "subtitles": {
+              "fields": {
+                "keyword": {
+                  "ignore_above": 256,
+                  "type": "keyword"
+                }
+              },
+              "type": "text"
+            },
+            "synopsis": {
+              "fields": {
+                "keyword": {
+                  "ignore_above": 256,
+                  "type": "keyword"
+                }
+              },
+              "type": "text"
+            },
+            "title": {
+              "fields": {
+                "keyword": {
+                  "ignore_above": 256,
+                  "type": "keyword"
+                }
+              },
+              "type": "text"
+            },
+            "transmissionDate": {
+              "fields": {
+                "keyword": {
+                  "ignore_above": 256,
+                  "type": "keyword"
+                }
+              },
+              "type": "text"
+            },
+            "transmissionDay": {
+              "fields": {
+                "keyword": {
+                  "ignore_above": 256,
+                  "type": "keyword"
+                }
+              },
+              "type": "text"
+            },
+            "transmissionMonth": {
+              "fields": {
+                "keyword": {
+                  "ignore_above": 256,
+                  "type": "keyword"
+                }
+              },
+              "type": "text"
+            },
+            "firstTransmissionId": {
+              "type": "keyword"
+            },
+            "transmissionService": {
+              "fields": {
+                "keyword": {
+                  "ignore_above": 256,
+                  "type": "keyword"
+                }
+              },
+              "type": "text"
+            },
+            "transmissionStartTime": {
+              "fields": {
+                "keyword": {
+                  "ignore_above": 256,
+                  "type": "keyword"
+                }
+              },
+              "type": "text"
+            },
+            "versionRestrictions": {
+              "fields": {
+                "keyword": {
+                  "ignore_above": 256,
+                  "type": "keyword"
+                }
+              },
+              "type": "text"
+            }
+          }
+        },
+        "files": {
+          "properties": {
+            "orig": {
+              "properties": {
+                "fileName": {
+                  "type": "text"
+                },
+                "fileType": {
+                  "fields": {
+                    "keyword": {
+                      "ignore_above": 256,
+                      "type": "keyword"
+                    }
+                  },
+                  "type": "text"
+                },
+                "url": {
+                  "type": "text"
+                }
+              }
+            },
+            "sourceList": {
+              "properties": {
+                "fileName": {
+                  "fields": {
+                    "keyword": {
+                      "ignore_above": 256,
+                      "type": "keyword"
+                    }
+                  },
+                  "type": "text"
+                },
+                "fileType": {
+                  "type": "long"
+                },
+                "quality": {
+                  "type": "long"
+                },
+                "track": {
+                  "type": "long"
+                },
+                "url": {
+                  "fields": {
+                    "keyword": {
+                      "ignore_above": 256,
+                      "type": "keyword"
+                    }
+                  },
+                  "type": "text"
+                }
+              }
+            },
+            "web": {
+              "properties": {
+                "fileName": {
+                  "type": "text"
+                },
+                "url": {
+                  "type": "text"
+                }
+              }
+            }
+          }
+        },
+        "id": {
+          "fields": {
+            "keyword": {
+              "ignore_above": 256,
+              "type": "keyword"
+            }
+          },
+          "type": "text"
+        },
+        "interstitialType": {
+          "type": "keyword"
+        },
+        "invalid": {
+          "type": "boolean"
+        },
+        "isExternalAsset": {
+          "type": "boolean"
+        },
+        "isExternalAssetSearchable": {
+          "type": "boolean"
+        },
+        "items": {
+          "properties": {
+            "iArchiveComment": {
+              "fields": {
+                "keyword": {
+                  "ignore_above": 256,
+                  "type": "keyword"
+                }
+              },
+              "type": "text"
+            },
+            "iEpisodeTitle": {
+              "fields": {
+                "keyword": {
+                  "ignore_above": 256,
+                  "type": "keyword"
+                }
+              },
+              "type": "text"
+            },
+            "iFirstTxDate": {
+              "type": "date"
+            },
+            "iFirstTxService": {
+              "fields": {
+                "keyword": {
+                  "ignore_above": 256,
+                  "type": "keyword"
+                }
+              },
+              "type": "text"
+            },
+            "iGenres": {
+              "fields": {
+                "keyword": {
+                  "ignore_above": 256,
+                  "type": "keyword"
+                }
+              },
+              "type": "text"
+            },
+            "iMaterialType": {
+              "fields": {
+                "keyword": {
+                  "ignore_above": 256,
+                  "type": "keyword"
+                }
+              },
+              "type": "text"
+            },
+            "iProgrammeNumber": {
+              "fields": {
+                "keyword": {
+                  "ignore_above": 256,
+                  "type": "keyword"
+                }
+              },
+              "type": "text"
+            },
+            "iProgrammeTitle": {
+              "fields": {
+                "keyword": {
+                  "ignore_above": 256,
+                  "type": "keyword"
+                }
+              },
+              "type": "text"
+            },
+            "iSeriesTitle": {
+              "fields": {
+                "keyword": {
+                  "ignore_above": 256,
+                  "type": "keyword"
+                }
+              },
+              "type": "text"
+            }
+          }
+        },
+        "itemType": {
+          "type": "keyword"
+        },
+        "genres": {
+          "properties": {
+            "name": {
+              "fields": {
+                "keyword": {
+                  "ignore_above": 256,
+                  "type": "keyword"
+                }
+              },
+              "type": "text"
+            },
+            "authority": {
+              "fields": {
+                "keyword": {
+                  "ignore_above": 256,
+                  "type": "keyword"
+                }
+              },
+              "type": "text"
+            },
+            "id": {
+              "fields": {
+                "keyword": {
+                  "ignore_above": 256,
+                  "type": "keyword"
+                }
+              },
+              "type": "text"
+            }
+          }
+        },
+        "holdingFormat": {
+          "type": "text"
+        },
+        "classifications": {
+          "properties": {
+            "subjects": {
+              "properties": {
+                "name": {
+                  "fields": {
+                    "keyword": {
+                      "type": "keyword"
+                    }
+                  },
+                  "type": "text"
+                },
+                "id": {
+                  "fields": {
+                    "keyword": {
+                      "ignore_above": 256,
+                      "type": "keyword"
+                    }
+                  },
+                  "type": "text"
+                }
+              }
+            },
+            "shots": {
+              "properties": {
+                "name": {
+                  "fields": {
+                    "keyword": {
+                      "type": "keyword"
+                    }
+                  },
+                  "type": "text"
+                },
+                "id": {
+                  "fields": {
+                    "keyword": {
+                      "ignore_above": 256,
+                      "type": "keyword"
+                    }
+                  },
+                  "type": "text"
+                }
+              }
+            },
+            "geographies": {
+              "properties": {
+                "name": {
+                  "fields": {
+                    "keyword": {
+                      "type": "keyword"
+                    }
+                  },
+                  "type": "text"
+                },
+                "id": {
+                  "fields": {
+                    "keyword": {
+                      "ignore_above": 256,
+                      "type": "keyword"
+                    }
+                  },
+                  "type": "text"
+                }
+              }
+            },
+            "naturalHistories": {
+              "properties": {
+                "name": {
+                  "fields": {
+                    "keyword": {
+                      "type": "keyword"
+                    }
+                  },
+                  "type": "text"
+                },
+                "id": {
+                  "fields": {
+                    "keyword": {
+                      "ignore_above": 256,
+                      "type": "keyword"
+                    }
+                  },
+                  "type": "text"
+                }
+              }
+            },
+            "motions": {
+              "properties": {
+                "name": {
+                  "fields": {
+                    "keyword": {
+                      "type": "keyword"
+                    }
+                  },
+                  "type": "text"
+                },
+                "id": {
+                  "fields": {
+                    "keyword": {
+                      "ignore_above": 256,
+                      "type": "keyword"
+                    }
+                  },
+                  "type": "text"
+                }
+              }
+            },
+            "infaxKeywords": {
+              "properties": {
+                "name": {
+                  "fields": {
+                    "keyword": {
+                      "type": "keyword"
+                    }
+                  },
+                  "type": "text"
+                },
+                "id": {
+                  "fields": {
+                    "keyword": {
+                      "ignore_above": 256,
+                      "type": "keyword"
+                    }
+                  },
+                  "type": "text"
+                }
+              }
+            },
+            "sportLibraries": {
+              "properties": {
+                "name": {
+                  "fields": {
+                    "keyword": {
+                      "type": "keyword"
+                    }
+                  },
+                  "type": "text"
+                },
+                "id": {
+                  "fields": {
+                    "keyword": {
+                      "ignore_above": 256,
+                      "type": "keyword"
+                    }
+                  },
+                  "type": "text"
+                }
+              }
+            },
+            "submitReasons": {
+              "properties": {
+                "name": {
+                  "fields": {
+                    "keyword": {
+                      "type": "keyword"
+                    }
+                  },
+                  "type": "text"
+                },
+                "id": {
+                  "fields": {
+                    "keyword": {
+                      "ignore_above": 256,
+                      "type": "keyword"
+                    }
+                  },
+                  "type": "text"
+                }
+              }
+            },
+            "retentionReasons": {
+              "properties": {
+                "name": {
+                  "fields": {
+                    "keyword": {
+                      "type": "keyword"
+                    }
+                  },
+                  "type": "text"
+                },
+                "id": {
+                  "fields": {
+                    "keyword": {
+                      "ignore_above": 256,
+                      "type": "keyword"
+                    }
+                  },
+                  "type": "text"
+                }
+              }
+            },
+            "legacy": {
+              "properties": {
+                "name": {
+                  "fields": {
+                    "keyword": {
+                      "type": "keyword"
+                    }
+                  },
+                  "type": "text"
+                },
+                "id": {
+                  "type": "keyword"
+                }
+              }
+            },
+            "people": {
+              "properties": {
+                "name": {
+                  "fields": {
+                    "keyword": {
+                      "type": "keyword"
+                    }
+                  },
+                  "type": "text"
+                },
+                "id": {
+                  "type": "keyword"
+                }
+              }
+            },
+            "titles": {
+              "properties": {
+                "name": {
+                  "fields": {
+                    "keyword": {
+                      "type": "keyword"
+                    }
+                  },
+                  "type": "text"
+                },
+                "id": {
+                  "type": "keyword"
+                }
+              }
+            },
+            "organisations": {
+              "properties": {
+                "name": {
+                  "fields": {
+                    "keyword": {
+                      "type": "keyword"
+                    }
+                  },
+                  "type": "text"
+                },
+                "id": {
+                  "type": "keyword"
+                }
+              }
+            },
+            "collections": {
+              "properties": {
+                "name": {
+                  "fields": {
+                    "keyword": {
+                      "type": "keyword"
+                    }
+                  },
+                  "type": "text"
+                },
+                "id": {
+                  "type": "keyword"
+                }
+              }
+            },
+            "eventDates": {
+              "properties": {
+                "name": {
+                  "fields": {
+                    "keyword": {
+                      "type": "keyword"
+                    }
+                  },
+                  "type": "text"
+                },
+                "id": {
+                  "type": "keyword"
+                }
+              }
+            },
+            "shootingDates": {
+              "properties": {
+                "name": {
+                  "fields": {
+                    "keyword": {
+                      "type": "keyword"
+                    }
+                  },
+                  "type": "text"
+                },
+                "id": {
+                  "type": "keyword"
+                }
+              }
+            },
+            "sportShootingDates": {
+              "properties": {
+                "name": {
+                  "fields": {
+                    "keyword": {
+                      "type": "keyword"
+                    }
+                  },
+                  "type": "text"
+                },
+                "id": {
+                  "type": "keyword"
+                }
+              }
+            }
+          }
+        },
+        "enrichedWith": {
+          "properties": {
+            "enrichmentName": {
+              "fields": {
+                "keyword": {
+                  "ignore_above": 256,
+                  "type": "keyword"
+                }
+              },
+              "type": "text"
+            },
+            "lastSync": {
+              "fields": {
+                "keyword": {
+                  "ignore_above": 256,
+                  "type": "keyword"
+                }
+              },
+              "type": "text"
+            }
+          }
+        },
+        "keywords": {
+          "fields": {
+            "keyword": {
+              "ignore_above": 256,
+              "type": "keyword"
+            }
+          },
+          "type": "text"
+        },
+        "lastModifiedBy": {
+          "type": "text"
+        },
+        "legacyNotes": {
+          "analyzer": "analyzer_word_delimiter",
+          "type": "text"
+        },
+        "lifecycleStatus": {
+          "type": "keyword"
+        },
+        "mediaAssetCopyrights": {
+          "properties": {
+            "annotationTrackType": {
+              "type": "text"
+            },
+            "annotationTrackTypeId": {
+              "type": "long"
+            },
+            "annotationType": {
+              "type": "text"
+            },
+            "annotationTypeId": {
+              "type": "long"
+            },
+            "clearanceSubtypeId": {
+              "type": "long"
+            },
+            "copyrightOwner": {
+              "type": "text"
+            },
+            "copyrightTitle": {
+              "type": "text"
+            },
+            "copyrightType": {
+              "type": "text"
+            },
+            "copyrightTypeId": {
+              "type": "long"
+            },
+            "extractType": {
+              "type": "text"
+            },
+            "extractTypeId": {
+              "type": "long"
+            },
+            "maId": {
+              "type": "long"
+            },
+            "mediaAssetAnnotationId": {
+              "type": "long"
+            },
+            "productVersionUuid": {
+              "analyzer": "analyzer_keyword",
+              "type": "text"
+            },
+            "sectionTimeIn": {
+              "type": "long"
+            },
+            "sectionTimeOut": {
+              "type": "long"
+            },
+            "timelineFormat": {
+              "fields": {
+                "keyword": {
+                  "ignore_above": 256,
+                  "type": "keyword"
+                }
+              },
+              "type": "text"
+            },
+            "timeLineFormatId": {
+              "type": "long"
+            }
+          }
+        },
+        "mediaAssetRestrictions": {
+          "properties": {
+            "annotationType": {
+              "type": "text"
+            },
+            "assetAnnotationId": {
+              "type": "long"
+            },
+            "assetCount": {
+              "type": "long"
+            },
+            "assetUuid": {
+              "analyzer": "analyzer_keyword",
+              "type": "text"
+            },
+            "authorisationGroup": {
+              "fields": {
+                "keyword": {
+                  "ignore_above": 256,
+                  "type": "keyword"
+                }
+              },
+              "type": "text"
+            },
+            "classificationNotes": {
+              "type": "text"
+            },
+            "clearanceUuid": {
+              "analyzer": "analyzer_keyword",
+              "type": "text"
+            },
+            "description": {
+              "fields": {
+                "keyword": {
+                  "ignore_above": 256,
+                  "type": "keyword"
+                }
+              },
+              "type": "text"
+            },
+            "endDate": {
+              "type": "date"
+            },
+            "languageFormat": {
+              "type": "text"
+            },
+            "language": {
+              "type": "text"
+            },
+            "locationDescription": {
+              "type": "text"
+            },
+            "locationIdentifier": {
+              "type": "text"
+            },
+            "locationIdentifierScheme": {
+              "type": "text"
+            },
+            "locationType": {
+              "type": "text"
+            },
+            "productVersion": {
+              "type": "text"
+            },
+            "productVersionUuid": {
+              "analyzer": "analyzer_keyword",
+              "type": "text"
+            },
+            "restriction": {
+              "type": "text"
+            },
+            "restrictionEndDate": {
+              "format": "dateOptionalTime",
+              "type": "date"
+            },
+            "restrictionSeverity": {
+              "type": "text"
+            },
+            "restrictionStartDate": {
+              "format": "dateOptionalTime",
+              "type": "date"
+            },
+            "restrictionType": {
+              "fields": {
+                "keyword": {
+                  "ignore_above": 256,
+                  "type": "keyword"
+                }
+              },
+              "type": "text"
+            },
+            "severity": {
+              "fields": {
+                "keyword": {
+                  "ignore_above": 256,
+                  "type": "keyword"
+                }
+              },
+              "type": "text"
+            },
+            "startDate": {
+              "type": "date"
+            }
+          }
+        },
+        "mediaAssetTitle": {
+          "fields": {
+            "keyword": {
+              "ignore_above": 256,
+              "type": "keyword"
+            }
+          },
+          "type": "text"
+        },
+        "mediaAssetUuid": {
+          "fields": {
+            "keyword": {
+              "ignore_above": 256,
+              "type": "keyword"
+            }
+          },
+          "type": "text"
+        },
+        "mediaAssetUuids": {
+          "type": "keyword"
+        },
+        "mediaComponent": {
+          "properties": {
+            "conceptUuid": {
+              "type": "keyword"
+            },
+            "mediaComponent": {
+              "type": "keyword"
+            }
+          }
+        },
+        "modifiedDate": {
+          "format": "dateOptionalTime",
+          "type": "date"
+        },
+        "narrator": {
+          "fields": {
+            "keyword": {
+              "ignore_above": 256,
+              "type": "keyword"
+            }
+          },
+          "type": "text"
+        },
+        "newsDayNumber": {
+          "properties": {
+            "day": {
+              "type": "long"
+            },
+            "item": {
+              "type": "long"
+            },
+            "newsDayNumber": {
+              "type": "keyword"
+            },
+            "year": {
+              "type": "long"
+            }
+          }
+        },
+        "owner": {
+          "type": "text"
+        },
+        "portalProxyUrl": {
+          "fields": {
+            "keyword": {
+              "ignore_above": 256,
+              "type": "keyword"
+            }
+          },
+          "type": "text"
+        },
+        "portalThumbnailUrl": {
+          "fields": {
+            "keyword": {
+              "ignore_above": 256,
+              "type": "keyword"
+            }
+          },
+          "type": "text"
+        },
+        "presenter": {
+          "fields": {
+            "keyword": {
+              "ignore_above": 256,
+              "type": "keyword"
+            }
+          },
+          "type": "text"
+        },
+        "productionScript": {
+          "properties": {
+            "format": {
+              "type": "text"
+            },
+            "text": {
+              "analyzer": "analyzer_word_delimiter",
+              "type": "text"
+            },
+            "totalPages": {
+              "type": "long"
+            },
+            "updated": {
+              "format": "dateOptionalTime",
+              "type": "date"
+            }
+          }
+        },
+        "programmeComponent": {
+          "analyzer": "analyzer_keyword",
+          "fielddata": true,
+          "type": "text"
+        },
+        "programmeNumber": {
+          "type": "text"
+        },
+        "qcDate": {
+          "format": "dateOptionalTime",
+          "type": "date"
+        },
+        "coreProgrammeId": {
+          "properties": {
+            "magazinePrefix": {
+              "fields": {
+                "keyword": {
+                  "ignore_above": 256,
+                  "type": "keyword"
+                }
+              },
+              "type": "text"
+            },
+            "coreNumber": {
+              "fields": {
+                "keyword": {
+                  "ignore_above": 256,
+                  "type": "keyword"
+                }
+              },
+              "type": "text"
+            },
+            "versionNumber": {
+              "fields": {
+                "keyword": {
+                  "ignore_above": 256,
+                  "type": "keyword"
+                }
+              },
+              "type": "text"
+            }
+          }
+        },
+        "commissionDept": {
+          "type": "keyword"
+        },
+        "commissionDate": {
+          "format": "dateOptionalTime",
+          "type": "date"
+        },
+        "holdingRecordingDate": {
+          "format": "dateOptionalTime",
+          "type": "date"
+        },
+        "holdingRecordingDates": {
+          "properties": {
+            "stockAssetId": {
+              "type": "keyword"
+            },
+            "holdingRecordingDate": {
+              "format": "dateOptionalTime",
+              "type": "date"
+            }
+          }
+        },
+        "indieName": {
+          "type": "keyword"
+        },
+        "recordingDate": {
+          "format": "dateOptionalTime",
+          "type": "date"
+        },
+        "reduxMetadata": {
+          "properties": {
+            "allProfiles": {
+              "fields": {
+                "keyword": {
+                  "ignore_above": 256,
+                  "type": "keyword"
+                }
+              },
+              "type": "text"
+            },
+            "proxyProfile": {
+              "properties": {
+                "exists": {
+                  "type": "boolean"
+                },
+                "selected": {
+                  "fields": {
+                    "keyword": {
+                      "ignore_above": 256,
+                      "type": "keyword"
+                    }
+                  },
+                  "type": "text"
+                }
+              }
+            }
+          }
+        },
+        "regionalOptOut": {
+          "type": "boolean"
+        },
+        "reporter": {
+          "fields": {
+            "keyword": {
+              "ignore_above": 256,
+              "type": "keyword"
+            }
+          },
+          "type": "text"
+        },
+        "restrictions": {
+          "fields": {
+            "keyword": {
+              "ignore_above": 256,
+              "type": "keyword"
+            }
+          },
+          "type": "text"
+        },
+        "restrictionType": {
+          "fields": {
+            "keyword": {
+              "ignore_above": 256,
+              "type": "keyword"
+            }
+          },
+          "type": "text"
+        },
+        "rightsHolder": {
+          "fields": {
+            "keyword": {
+              "ignore_above": 256,
+              "type": "keyword"
+            }
+          },
+          "type": "text"
+        },
+        "rightsIndicator": {
+          "fields": {
+            "keyword": {
+              "ignore_above": 256,
+              "type": "keyword"
+            }
+          },
+          "type": "text"
+        },
+        "rightsInformation": {
+          "fields": {
+            "keyword": {
+              "ignore_above": 256,
+              "type": "keyword"
+            }
+          },
+          "type": "text"
+        },
+        "seriesId": {
+          "type": "keyword"
+        },
+        "seriesNumber": {
+          "type": "integer"
+        },
+        "seriesTitle": {
+          "fields": {
+            "keyword": {
+              "ignore_above": 256,
+              "normalizer": "normalizer_keyword",
+              "type": "keyword"
+            }
+          },
+          "type": "text"
+        },
+        "seriesTitleKeyword": {
+          "type": "keyword"
+        },
+        "sourceId": {
+          "type": "keyword"
+        },
+        "sourceSystem": {
+          "type": "keyword"
+        },
+        "soundType": {
+          "type": "keyword"
+        },
+        "spoolStatus": {
+          "type": "keyword"
+        },
+        "startTimeIn": {
+          "type": "long"
+        },
+        "strixMetadata": {
+          "properties": {
+            "aerialShots": {
+              "fields": {
+                "keyword": {
+                  "ignore_above": 256,
+                  "type": "keyword"
+                }
+              },
+              "type": "text"
+            },
+            "archiveTapeId": {
+              "analyzer": "analyzer_keyword",
+              "type": "text"
+            },
+            "billedTitle": {
+              "type": "keyword"
+            },
+            "captureLocation": {
+              "analyzer": "analyzer_keyword",
+              "type": "text"
+            },
+            "clipComments": {
+              "analyzer": "analyzer_word_delimiter",
+              "type": "text"
+            },
+            "clipDuration": {
+              "type": "long"
+            },
+            "contributor": {
+              "type": "keyword"
+            },
+            "description": {
+              "type": "keyword"
+            },
+            "episodeTitle": {
+              "type": "keyword"
+            },
+            "genre": {
+              "analyzer": "analyzer_keyword",
+              "type": "text"
+            },
+            "itemTitle": {
+              "analyzer": "analyzer_word_delimiter",
+              "type": "text"
+            },
+            "irregularData": {
+              "properties": {
+                "clipDuration": {
+                  "fields": {
+                    "keyword": {
+                      "ignore_above": 256,
+                      "type": "keyword"
+                    }
+                  },
+                  "type": "text"
+                }
+              }
+            },
+            "keywords": {
+              "type": "keyword"
+            },
+            "producer": {
+              "analyzer": "analyzer_word_delimiter",
+              "type": "text"
+            },
+            "programmeNumber": {
+              "analyzer": "analyzer_keyword",
+              "type": "text"
+            },
+            "recordNumber": {
+              "analyzer": "analyzer_keyword",
+              "type": "text"
+            },
+            "recordNumberCopy": {
+              "analyzer": "analyzer_keyword",
+              "type": "text"
+            },
+            "reporter": {
+              "analyzer": "analyzer_word_delimiter",
+              "type": "text"
+            },
+            "rightsAndRestrictions": {
+              "analyzer": "analyzer_word_delimiter",
+              "type": "text"
+            },
+            "rightsRestrictions": {
+              "fields": {
+                "keyword": {
+                  "ignore_above": 256,
+                  "type": "keyword"
+                }
+              },
+              "type": "text"
+            },
+            "rushes": {
+              "analyzer": "analyzer_word_delimiter",
+              "type": "text"
+            },
+            "rushesCopy": {
+              "analyzer": "analyzer_word_delimiter",
+              "type": "text"
+            },
+            "synopsis": {
+              "type": "keyword"
+            },
+            "tapeFormat": {
+              "fields": {
+                "keyword": {
+                  "ignore_above": 256,
+                  "type": "keyword"
+                }
+              },
+              "type": "text"
+            },
+            "totalTapes": {
+              "type": "long"
+            },
+            "transmissionDate": {
+              "fields": {
+                "keyword": {
+                  "ignore_above": 256,
+                  "type": "keyword"
+                }
+              },
+              "type": "text"
+            }
+          }
+        },
+        "subtitles": {
+          "properties": {
+            "markup": {
+              "fields": {
+                "keyword": {
+                  "ignore_above": 256,
+                  "type": "keyword"
+                }
+              },
+              "type": "text"
+            }
+          }
+        },
+        "supplierType": {
+          "type": "keyword"
+        },
+        "sync": {
+          "properties": {
+            "enrichmentStatus": {
+              "fields": {
+                "keyword": {
+                  "ignore_above": 256,
+                  "type": "keyword"
+                }
+              },
+              "type": "text"
+            },
+            "firstAdded": {
+              "type": "date"
+            },
+            "lastSaved": {
+              "format": "dateOptionalTime",
+              "type": "date"
+            },
+            "lastSearchSync": {
+              "format": "dateOptionalTime",
+              "type": "date"
+            },
+            "lastSourceSync": {
+              "format": "dateOptionalTime",
+              "type": "date"
+            },
+            "lastTopicsUpdate": {
+              "format": "dateOptionalTime",
+              "type": "date"
+            },
+            "requiresSearchSync": {
+              "type": "boolean"
+            }
+          }
+        },
+        "shortSynopsis": {
+          "analyzer": "analyzer_word_delimiter",
+          "type": "text"
+        },
+        "storageId": {
+          "analyzer": "analyzer_keyword",
+          "type": "text"
+        },
+        "synopsis": {
+          "analyzer": "analyzer_word_delimiter",
+          "type": "text"
+        },
+        "thumbnailUrl": {
+          "type": "text"
+        },
+        "title": {
+          "analyzer": "analyzer_word_delimiter",
+          "type": "text"
+        },
+        "transcription": {
+          "properties": {
+            "silent": {
+              "type": "boolean"
+            },
+            "text": {
+              "type": "text"
+            },
+            "updated": {
+              "format": "dateOptionalTime",
+              "type": "date"
+            },
+            "version": {
+              "type": "text"
+            }
+          }
+        },
+        "transmissions": {
+          "properties": {
+            "id": {
+              "type": "keyword"
+            },
+            "authority": {
+              "type": "keyword"
+            },
+            "ampUuid": {
+              "type": "keyword"
+            },
+            "transmissionDate": {
+              "format": "dateOptionalTime",
+              "type": "date"
+            },
+            "transmissionService": {
+              "fields": {
+                "keyword": {
+                  "ignore_above": 256,
+                  "type": "keyword"
+                }
+              },
+              "type": "text"
+            },
+            "programmeNumber": {
+              "fields": {
+                "keyword": {
+                  "ignore_above": 256,
+                  "type": "keyword"
+                }
+              },
+              "type": "text"
+            },
+            "clipDuration": {
+              "type": "long"
+            },
+            "txSubs": {
+              "type": "boolean"
+            },
+            "txRepeat": {
+              "type": "boolean"
+            },
+            "txConfirmed": {
+              "type": "boolean"
+            },
+            "txSigned": {
+              "type": "boolean"
+            },
+            "txAudioDescribed": {
+              "type": "boolean"
+            },
+            "txLive": {
+              "type": "boolean"
+            },
+            "regOptOut": {
+              "type": "boolean"
+            },
+            "txPubWeek": {
+              "properties": {
+                "year": {
+                  "type": "integer"
+                },
+                "week": {
+                  "type": "integer"
+                }
+              }
+            },
+            "billedTitle": {
+              "analyzer": "analyzer_word_delimiter",
+              "type": "text"
+            },
+            "billingDescription": {
+              "analyzer": "analyzer_word_delimiter",
+              "type": "text"
+            }
+          }
+        },
+        "transmissionDate": {
+          "format": "dateOptionalTime",
+          "type": "date"
+        },
+        "transmissionDay": {
+          "type": "long"
+        },
+        "transmissionMonth": {
+          "type": "long"
+        },
+        "transmissionService": {
+          "fields": {
+            "keyword": {
+              "ignore_above": 256,
+              "type": "keyword"
+            }
+          },
+          "type": "text"
+        },
+        "transmissionStartTime": {
+          "fields": {
+            "keyword": {
+              "ignore_above": 256,
+              "type": "keyword"
+            }
+          },
+          "type": "text"
+        },
+        "transmissionYear": {
+          "type": "long"
+        },
+        "tvFormat": {
+          "fields": {
+            "keyword": {
+              "ignore_above": 256,
+              "type": "keyword"
+            }
+          },
+          "type": "text"
+        },
+        "usageTrafficLight": {
+          "fields": {
+            "keyword": {
+              "ignore_above": 256,
+              "type": "keyword"
+            }
+          },
+          "type": "text"
+        },
+        "versionRestrictions": {
+          "properties": {
+            "assetCount": {
+              "type": "long"
+            },
+            "authorisationGroup": {
+              "type": "text"
+            },
+            "description": {
+              "fields": {
+                "keyword": {
+                  "ignore_above": 256,
+                  "type": "keyword"
+                }
+              },
+              "type": "text"
+            },
+            "endDate": {
+              "format": "dateOptionalTime",
+              "type": "date"
+            },
+            "productUuid": {
+              "type": "text"
+            },
+            "productVersion": {
+              "type": "text"
+            },
+            "productVersionUuid": {
+              "analyzer": "analyzer_keyword",
+              "type": "text"
+            },
+            "restrictionType": {
+              "type": "text"
+            },
+            "severity": {
+              "type": "text"
+            },
+            "startDate": {
+              "format": "dateOptionalTime",
+              "type": "date"
+            }
+          }
+        },
+        "versionTitle": {
+          "analyzer": "analyzer_word_delimiter",
+          "type": "text"
+        },
+        "videotapeRecordingDescription": {
+          "analyzer": "analyzer_word_delimiter",
+          "type": "text"
+        }
+      }
+    }
+  },
+  "settings": {
+    "index": {
+      "number_of_replicas": 1
+    }
+  }
+}
