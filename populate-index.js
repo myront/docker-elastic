@@ -50,16 +50,14 @@ const question = (q) => {
     
     const indexName = firstArg || await question(`What's the name of index you want to create? \n`);
 
-    console.log(`Alrighty.. index "${indexName}" will be created!`);
-
     const esClient = await connectToElastic();
-
     const exists = await doesIndexExist(esClient, indexName);
     if(exists) {
       throw new Error(`The index "${indexName}" already exists!`);
     }
-    
-    const schema = await fs.readFileSync('schemas/assets.json', { encoding:'utf8' })
+    console.log(`Alrighty.. index "${indexName}" will be created!`);
+
+    const schema = await fs.readFileSync('schemas/assets.json', { encoding:'utf8' });
     const parsedSchema = JSON.parse(schema);
 
     await esClient.indices.create({
