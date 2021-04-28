@@ -28,10 +28,31 @@ const doesIndexExist = async (esClient, indexName) => {
   return existingIndexNames.some(name => name === indexName)
 };
 
+
+const question = (q) => {
+  const readline = require('readline').createInterface({
+    input: process.stdin,
+    output: process.stdout
+  });
+
+  return new Promise((resolve, reject) => {
+    readline.question(q, answer => {
+      resolve(answer);
+      readline.close()
+    });  
+  })
+}
+
 (async () => {
   try {
+    const args = process.argv.slice(2);
+    const [firstArg] = args;
+    
+    const indexName = firstArg || await question(`What's the name of index you want to create? \n`);
+
+    console.log(`Alrighty.. index "${indexName}" will be created!`);
+
     const esClient = await connectToElastic();
-    const indexName = 'assets';
 
     const exists = await doesIndexExist(esClient, indexName);
     if(exists) {
