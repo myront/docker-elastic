@@ -94,6 +94,9 @@ const chunk = (arr, chunkSize = 10) => arr.reduce((acc, curr) => {
       body: parsedSchema
     });
 
+    console.log(`Index "${indexName}" created! ✅`);
+    console.log(`"${indexName}" will now be hydrated with assets!`);
+    
     const assetsAsStrings = await readFileAsArray('data/assets.ndjson');
     const assets = assetsAsStrings
       .filter(l => isJSON(l))
