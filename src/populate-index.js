@@ -43,6 +43,35 @@ const question = (q) => {
   })
 }
 
+const readFileAsArray = filePath =>
+  fs
+    .readFileSync(filePath)
+    .toString()
+    .split('\n');
+
+const isJSON = (str) => {
+  try {
+    JSON.parse(str);
+    return true;
+  } catch (error) {
+    return false;
+  }
+}
+
+const chunk = (arr, chunkSize = 10) => arr.reduce((acc, curr) => {
+  const lastArray = acc.slice(-1)[0] || [];
+  return lastArray.length >= chunkSize ? [
+    ...acc,
+    [curr]
+  ] : [
+    ...acc.slice(0, -1),
+    [
+      ...lastArray,
+      curr
+    ]
+  ];
+}, []);
+
 (async () => {
   try {
     const args = process.argv.slice(2);
@@ -64,8 +93,38 @@ const question = (q) => {
       index: indexName,
       body: parsedSchema
     });
-    console.log(`Elastic index ${indexName} has been created 🎉`);
+
+    const assetsAsStrings = await readFileAsArray('data/assets.ndjson');
+    const assets = assetsAsStrings
+      .filter(l => isJSON(l))
+      .map(a => JSON.parse(a));
+
+    const numberOfRequestsInParallel = 3;
+    const numberOfBatchDocuments = 5;
+    
+    const assetsInBatches = chunk(assets, numberOfBatchDocuments);
+    const assetsIndexRequests = chunk(assetsInBatches, numberOfRequestsInParallel);
+
+    const getBulkRequest = (assets) => esClient.bulk({
+      refresh: true,
+      body: assets
+        .flatMap(doc => [{
+          index: { _index: indexName, _id: doc.id, _type: 'asset' } },
+          doc
+        ])
+    });
+
+    for (const requests of assetsIndexRequests) {
+      await Promise.all(requests.map(r => getBulkRequest(r)))
+      const index = assetsIndexRequests.indexOf(requests);
+      console.log(`${index+1}/${assetsIndexRequests.length} batches done!`);
+    }
+
+    const { body: countResponse } = await esClient.count({ index: indexName });
+    const { count } = countResponse;
+
+    console.log(`Elastic index ${indexName} has been created 🎉 and populated with data. No: ${count}`);
   } catch (error) {
-    console.log(error);
+    console.log(error.message);
   }
 })();

@@ -5,7 +5,7 @@ start-elastic-6:
 	docker-compose -f docker-compose-elastic-6.2.4.yml up
 
 stop-elastic-6:
-	docker-compose -f docker-compose-elastic-6.2.4.yml up
+	docker-compose -f docker-compose-elastic-6.2.4.yml down
 
 start-elastic-7:
 	docker-compose up
@@ -14,4 +14,4 @@ stop-elastic-7:
 	docker-compose down
 
 populate-index:
-	node populate-index.js
+	node src/populate-index.js
