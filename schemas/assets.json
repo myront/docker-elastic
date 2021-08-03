@@ -2233,6 +2233,112 @@
         "holdingFormat": {
           "type": "text"
         },
+        "keyframes": {
+          "properties": {
+            "authority": {
+              "fields": {
+                "keyword": {
+                  "ignore_above": 256,
+                  "type": "keyword"
+                }
+              },
+              "type": "text"
+            },
+            "automatic": {
+              "type": "boolean"
+            },
+            "createdBy": { 
+              "type": "keyword"
+            },
+            "createdDate": { 
+              "type": "date"
+            },
+            "description": { 
+              "type": "text"
+            },
+            "graphicURL": { 
+              "type": "keyword"
+            },
+            "lastUpdatedBy": { 
+              "type": "keyword"
+            },
+            "lastUpdatedDate": { 
+              "type": "date"
+            },
+            "startOffset": { 
+              "type": "keyword"
+            },
+            "startFrames": { 
+              "type": "long"
+            },
+            "startSec": { 
+              "type": "long"
+            }
+          }
+        },
+        "jlibrarySiteOutletId": {
+          "type": "keyword"
+        },
+        "jlibraryStatus": {
+          "type": "text"
+        },
+        "jlibrarySourceSiteDescription": {
+          "type": "text"
+        },
+        "jlibraryEdited": {
+          "type": "boolean"
+        },
+        "titles": {
+          "type": "nested",
+          "dynamic": false,
+          "properties": {
+            "type": { 
+              "type": "keyword"
+            },
+            "authority": {
+              "type": "keyword"
+            },
+            "value": {
+              "type": "text",
+              "fields": {
+                "keyword": {
+                  "type": "keyword"
+                }
+              }
+            },
+            "programmeObject": {
+              "type": "keyword"
+            }
+          }
+        },
+        "ids": {
+          "type": "nested",
+          "dynamic": false,
+          "properties": {
+            "type": { 
+              "type": "keyword"
+            },
+            "authority": {
+              "type": "keyword"
+            },
+            "value": {
+              "type": "keyword"
+            }
+          }
+        },
+        "synopses": {
+          "properties": {
+            "type": {
+              "type": "keyword"
+            },
+            "authority": {
+              "type": "keyword"
+            },
+            "value": {
+              "type": "text"
+            }
+          }
+        },
         "classifications": {
           "properties": {
             "subjects": {
@@ -2541,6 +2647,54 @@
                 },
                 "id": {
                   "type": "keyword"
+                }
+              }
+            },
+            "jlibraryKeywords": {
+              "properties": {
+                "name": {
+                  "fields": {
+                    "keyword": {
+                      "type": "keyword"
+                    }
+                  },
+                  "type": "text"
+                },
+                "id": {
+                  "type": "keyword"
+                }
+              }
+            },
+            "jlibraryLocations": {
+              "properties": {
+                "name": {
+                  "fields": {
+                    "keyword": {
+                      "type": "keyword"
+                    }
+                  },
+                  "type": "text"
+                },
+                "id": {
+                  "type": "keyword"
+                }
+              }
+            },
+            "jlibraryReporters": {
+              "properties": {
+                "name": {
+                  "fields": {
+                    "keyword": {
+                      "type": "keyword"
+                    }
+                  },
+                  "type": "text"
+                },
+                "id": {
+                  "type": "keyword"
+                },
+                "preferred": {
+                  "type": "boolean"
                 }
               }
             }
@@ -3040,6 +3194,19 @@
           "type": "text"
         },
         "seriesTitleKeyword": {
+          "type": "keyword"
+        },
+        "seriesSearchKey": {
+          "fields": {
+            "keyword": {
+              "ignore_above": 256,
+              "normalizer": "normalizer_keyword",
+              "type": "keyword"
+            }
+          },
+          "type": "text"
+        },
+        "seriesSearchKeyKeyword": {
           "type": "keyword"
         },
         "sourceId": {
