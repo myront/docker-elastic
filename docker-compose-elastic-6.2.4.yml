@@ -9,15 +9,15 @@ services:
       - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
       - discovery.type=single-node
     ports:
-      - 9200:9200
+      - 9201:9200
     volumes:
       - esdata1:/usr/local/var/lib/elasticsearch
   kibana:
     image: docker.elastic.co/kibana/kibana-oss:6.2.4
     ports:
-      - 5601:5601
+      - 5602:5601
     environment:
-      ELASTICSEARCH_HOSTS: http://localhost:9200
+      ELASTICSEARCH_HOSTS: http://localhost:9201
     links:
       - 'elasticsearch'
 

@@ -2,6 +2,7 @@ SHELL := /bin/bash
 MAKE_DIR := $(shell dirname $(realpath $(lastword $(MAKEFILE_LIST))))
 
 start-elastic-6:
+	open http://localhost:5602/
 	docker compose -f docker-compose-elastic-6.2.4.yml up
 
 stop-elastic-6:

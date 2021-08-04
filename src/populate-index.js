@@ -79,7 +79,9 @@ const chunk = (arr, chunkSize = 10) => arr.reduce((acc, curr) => {
     
     const indexName = firstArg || await question(`What's the name of index you want to create? \n`);
 
-    const esClient = await connectToElastic();
+    const esClient = await connectToElastic({
+      port: 9201
+    });
     const exists = await doesIndexExist(esClient, indexName);
     if(exists) {
       throw new Error(`The index "${indexName}" already exists!`);
